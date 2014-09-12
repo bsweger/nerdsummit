@@ -15,11 +15,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <!-- General and theme style sheets -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/css/reveal.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.5.0/css/reveal.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.5.0/css/theme/simple.css" id="theme">
 
 <!-- For syntax highlighting -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/lib/css/zenburn.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.5.0/lib/css/zenburn.css">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -27,14 +27,14 @@ if( window.location.search.match( /print-pdf/gi ) ) {
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = '//cdn.jsdelivr.net/reveal.js/2.4.0/css/print/pdf.css';
+        link.href = '//cdn.jsdelivr.net/reveal.js/2.5.0/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
 }
 
 </script>
 
 <!--[if lt IE 9]>
-<script src="//cdn.jsdelivr.net/reveal.js/2.4.0/lib/js/html5shiv.js"></script>
+<script src="//cdn.jsdelivr.net/reveal.js/2.5.0/lib/js/html5shiv.js"></script>
 <![endif]-->
 
 <!-- Get Font-awesome from cdn -->
@@ -1840,6 +1840,24 @@ div.text_cell_render{
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="intro-to-ipython-notebook">Intro to IPython Notebook</h1>
+<div style="float: left; margin-top: 100px;">
+<img src="media/npp-logo-green.png" alt="National Priorities Project" />
+</div>
+<div style="float: left; margin-top: 125px; margin-left: 25px;">
+Becky Sweger<br />Director of Data and Technology<br />National Priorities Project<br />bsweger@gmail.com<br /><span class="citation">[@bendystraw]</span>(https://twitter.com/bendystraw)
+</div>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="what-well-cover">What We'll Cover</h2>
 <ul>
 <li>IPython Notebook: what is it?</li>
@@ -1876,7 +1894,7 @@ div.text_cell_render{
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="ipython">iPython</h2>
 <div class="figure">
-<img src="media/no.png" alt="no" /><p class="caption">no</p>
+<img src="media/no.png" />
 </div>
 </div>
 </div>
@@ -2363,7 +2381,7 @@ iIiIiIiIiIiI6En8fwO88JVnqnWyAAAAAElFTkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="how-does-it-help">How Does it Help?</h1>
 <div class="figure">
-<img src="media/science-cat.jpg" title="Science Cat" alt="Science Cat" /><p class="caption">Science Cat</p>
+<img src="media/science-cat.jpg" title="Science Cat" />
 </div>
 </div>
 </div>
@@ -2440,7 +2458,7 @@ iIiIiIiIiIiI6En8fwO88JVnqnWyAAAAAElFTkSuQmCC
 <li>Launch IPython Notebook. This should start up the notebook server and open the notebook dashboard in your browser.</li>
 </ol>
 <div class="figure">
-<img src="media/anaconda-launcher.png" title="Anaconda Launcher" alt="Anaconda Launcher" /><p class="caption">Anaconda Launcher</p>
+<img src="media/anaconda-launcher.png" title="Anaconda Launcher" />
 </div>
 </div>
 </div>
@@ -2468,9 +2486,24 @@ iIiIiIiIiIiI6En8fwO88JVnqnWyAAAAAElFTkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol style="list-style-type: decimal">
 <li>Install IPython and it's main optional dependencies (many of these are needed to run the Notebook): pip install ipython[all]</li>
-<li>If you get an error installing ipython[notebook], install dependencies separately: pip install jinja2 pip install sphinx pip install pyzmq pip install pygments pip install tornado pip install ipython</li>
-<li><a href="http://ipython.org/ipython-doc/2/notebook/notebook.html#starting-the-notebook-server" title="IPython: Starting the Notebook Server">Start</a> the notebook server. This should start up the server and open the notebook dashboard in your browser. ipython notebook</li>
-<li>Alternately, to start a notebook server from a VM, make sure you're forwarding port 8888 start up the server: ipython notebook --ip=0.0.0.0 On the host machine's browser: http://localhost:8888</li>
+<li>If you get an error installing ipython[notebook], install dependencies separately:
+<ul>
+<li>pip install jinja2</li>
+<li>pip install sphinx</li>
+<li>pip install pyzmq</li>
+<li>pip install pygments</li>
+<li>pip install tornado</li>
+<li>pip install ipython</li>
+</ul></li>
+<li><a href="http://ipython.org/ipython-doc/2/notebook/notebook.html#starting-the-notebook-server" title="IPython: Starting the Notebook Server">Start</a> the notebook server. This should start up the server and open the notebook dashboard in your browser.
+<ul>
+<li>ipython notebook</li>
+</ul></li>
+<li>Alternately, to start a notebook server from a VM, make sure you're forwarding port 8888 start up the server:
+<ul>
+<li>ipython notebook --ip=0.0.0.0</li>
+<li>on the host machine's browser: http://localhost:8888</li>
+</ul></li>
 </ol>
 </div>
 </div>
@@ -2490,7 +2523,7 @@ iIiIiIiIiIiI6En8fwO88JVnqnWyAAAAAElFTkSuQmCC
 <li>Each open notebook is connected to a single Python kernal</li>
 <li>Notebooks are a series of cells (code cells, Markdown, etc.)</li>
 </ul>
-<p><img src="media/dashboard-notebooks-list.png" title="IPython Dashboard" alt="&quot;IPython Dashboard&quot;" /> <a href="http://ipython.org/ipython-doc/stable/notebook/notebook.html#introduction" title="IPython Notebook Introduction">More information</a></p>
+<p><img src="media/dashboard-notebooks-list.png" title="IPython Dashboard" /> <a href="http://ipython.org/ipython-doc/stable/notebook/notebook.html#introduction" title="IPython Notebook Introduction">More information</a></p>
 </div>
 </div>
 </div></section>
@@ -2565,9 +2598,9 @@ iIiIiIiIiIiI6En8fwO88JVnqnWyAAAAAElFTkSuQmCC
 </div>
 </div>
 
-<script src="//cdn.jsdelivr.net/reveal.js/2.4.0/lib/js/head.min.js"></script>
+<script src="//cdn.jsdelivr.net/reveal.js/2.5.0/lib/js/head.min.js"></script>
 
-<script src="//cdn.jsdelivr.net/reveal.js/2.4.0/js/reveal.js"></script>
+<script src="//cdn.jsdelivr.net/reveal.js/2.5.0/js/reveal.js"></script>
 
 <script>
 
@@ -2582,9 +2615,9 @@ transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/c
 
 // Optional libraries used to extend on reveal.js
 dependencies: [
-{ src: "//cdn.jsdelivr.net/reveal.js/2.4.0/lib/js/classList.js", condition: function() { return !document.body.classList; } },
-{ src: "//cdn.jsdelivr.net/reveal.js/2.4.0/plugin/highlight/highlight.js", async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-{ src: "//cdn.jsdelivr.net/reveal.js/2.4.0/plugin/notes/notes.js", async: true, condition: function() { return !!document.body.classList; } }
+{ src: "//cdn.jsdelivr.net/reveal.js/2.5.0/lib/js/classList.js", condition: function() { return !document.body.classList; } },
+{ src: "//cdn.jsdelivr.net/reveal.js/2.5.0/plugin/highlight/highlight.js", async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: "//cdn.jsdelivr.net/reveal.js/2.5.0/plugin/notes/notes.js", async: true, condition: function() { return !!document.body.classList; } }
 ]
 });
 </script>
