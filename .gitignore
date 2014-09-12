@@ -54,3 +54,6 @@ docs/_build/
 
 # IPython notebook checkpoints
 *.ipynb_checkpoints
+
+# Ignore data
+data/*.*
